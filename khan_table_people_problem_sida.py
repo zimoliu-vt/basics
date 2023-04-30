@@ -8,7 +8,7 @@
         Let x be the number of tables.
         Write an equation to represent the number of people that can fit at x tables.
         For example: How many people can fit at 3 tables?
-        Answer: 18 people
+        Answer: 14 people
 """
 
 num_table = int(input("How many tables? "))
