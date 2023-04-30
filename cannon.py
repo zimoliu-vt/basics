@@ -37,19 +37,19 @@ def test(angle, speed, gravity, height, distance):
 # print(result)
 # exit(0)
 
-speed=30
-gravity=9.55
-height=15
-distance=82.9
+g_speed=12
+g_gravity=9.81
+g_height=0
+g_distance=15
 
 lower_bound=-90
 upper_bound=45
 
-result = test(lower_bound, speed=speed, gravity=gravity, height=height, distance=distance)
+result = test(lower_bound, speed=g_speed, gravity=g_gravity, height=g_height, distance=g_distance)
 #print(result)
 assert result=="too small", "Lower bound is too large"
 
-result = test(upper_bound, speed=speed, gravity=gravity, height=height, distance=distance)
+result = test(upper_bound, speed=g_speed, gravity=g_gravity, height=g_height, distance=g_distance)
 #print(result)
 assert result=="too large" or result=="bingo", "Upper bound is too small"
 
@@ -63,7 +63,7 @@ else:
         guess=(upper_bound-lower_bound)/2+lower_bound
         #print(guess)
 
-        result = test(guess, speed=speed, gravity=gravity, height=height, distance=distance)
+        result = test(guess, speed=g_speed, gravity=g_gravity, height=g_height, distance=g_distance)
         #print(result)
 
         if result=="too large":
