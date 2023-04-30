@@ -11,8 +11,19 @@
         Answer: 14 people
 """
 
-num_table = int(input("How many tables? "))
-print(f"Number of table: {num_table}")
-assert num_table>0, "Number of table must be greater than 0"
-num_people = 2 + num_table * 4
-print(f"Number of people: {num_people}")
+def number_of_people(num_table):
+    """
+        Return the number of people that can fit at x tables.
+    """
+    return 2 + num_table * 4
+
+def main():
+    num_table = int(input("How many tables? "))
+    print(f"Number of table: {num_table}")
+    assert num_table>0, "Number of table must be greater than 0"
+    num_people = number_of_people(num_table)
+    print(f"Number of people: {num_people}")
+
+if __name__ == "__main__":
+    main()
+    
