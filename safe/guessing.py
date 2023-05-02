@@ -11,8 +11,11 @@ def generating_all_possible_pins(n_digit=4):
         yield guess
 
 def guessing(n_digit=4):
+    c = 0
     for g in generating_all_possible_pins(4):
-        print(".", end=" ")
+        c += 1
+        if c%100 == 0:
+            print(".", end=" ")
         if check.check(g):
             return g
         
